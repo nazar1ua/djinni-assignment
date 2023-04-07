@@ -1,0 +1,35 @@
+:root {
+  --bs-primary: #ED7135;
+  --bs-primary-rgb: 237,113,53;
+  --bs-body-color: #292929;
+  --bs-body-color-rgb: 41,41,41;
+  --bs-secondary-color: rgb(102, 102, 102);
+  --bs-secondary-color-rgb: 102,102,102;
+  --bs-dark: #292929;
+  --bs-dark-rgb: 41,41,41;
+  --bs-light-border-subtle: #EBEBEB;
+  --bs-light: #EEEEEE;
+  --bs-light-rgb: 238,238,238;
+}
+
+body {
+  font-family: 'Commissioner', sans-serif;
+}
+
+.form-control {
+  transition-property: all !important;
+}
+
+.form-control:focus {
+  background-color: var(--bs-light-bg-subtle) !important;
+  border-color: rgba(var(--bs-primary-rgb),.5) !important;
+  box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb),.25);
+}
+
+.border-opacity-0 {
+  --bs-border-color: transparent;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: var(--bs-dark);
+}
