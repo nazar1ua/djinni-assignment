@@ -28,26 +28,34 @@
   setTheme(getPreferredTheme())
 
   const showActiveTheme = (theme, focus = false) => {
-    const themeSwitcher = document.querySelector('#bd-theme')
+    const themeSwitcher = document.querySelectorAll('#bd-theme')
 
-    if (!themeSwitcher) {
+    if (!themeSwitcher[0]) {
       return
     }
 
-    const themeSwitcherText = document.querySelector('#bd-theme-text')
-    const activeThemeIcon = document.querySelector('.theme-icon-active')
-    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+    const themeSwitcherText = document.querySelectorAll('#bd-theme-text')
+    const activeThemeIcon = document.querySelectorAll('.theme-icon-active')
+    const btnToActive = document.querySelectorAll(`[data-bs-theme-value="${theme}"]`)
     let svgOfActiveBtn
-    btnToActive.querySelector('i').classList.forEach(c => {
-      if (c.includes('bi-')) {
-        svgOfActiveBtn = c
-      }
+    btnToActive.forEach(el => {
+      el.querySelector('i').classList.forEach(c => {
+        if (c.includes('bi-')) {
+          svgOfActiveBtn = c
+        }
+      })
+      // el.querySelector('.ms-auto').classList.remove('d-none')
+      // console.log(el.querySelector('.ms-auto'))
     })
     
-    activeThemeIcon.classList.forEach(c => {
-      if (c.includes('bi-')) {
-        activeThemeIcon.classList.remove(c)
-      }
+    activeThemeIcon.forEach(el => {
+      el.classList.forEach(c => {
+        if (c.includes('bi-')) {
+          activeThemeIcon.forEach(element => {
+            element.classList.remove(c)
+          })
+        }
+      })
     })
 
     document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
@@ -55,14 +63,22 @@
       element.setAttribute('aria-pressed', 'false')
     })
 
-    btnToActive.classList.add('active')
-    btnToActive.setAttribute('aria-pressed', 'true')
-    activeThemeIcon.classList.add(svgOfActiveBtn)
-    const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
-    themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+    btnToActive.forEach(el => {
+      el.classList.add('active')
+      el.setAttribute('aria-pressed', 'true')
+    })
+    activeThemeIcon.forEach(el => {
+      el.classList.add(svgOfActiveBtn)
+    })
+    const themeSwitcherLabel = `${themeSwitcherText[0].textContent} (${btnToActive[0].dataset.bsThemeValue})`
+    themeSwitcher.forEach(el => {
+      el.setAttribute('aria-label', themeSwitcherLabel)
+    })
 
     if (focus) {
-      themeSwitcher.focus()
+      themeSwitcher.forEach(el => {
+        el.focus()
+      })
     }
   }
 
