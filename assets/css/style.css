@@ -16,7 +16,6 @@
 [data-bs-theme=dark]:root {
   --bs-primary: #ED7135;
   --bs-primary-rgb: 237,113,53;
-  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(237, 113, 53, 0.5);
   --bs-body-color: #f2f2f2;
   --bs-body-color-rgb: 242,242,242;
   --bs-secondary: #e4e4e4;
@@ -26,6 +25,11 @@
   --bs-light-border-subtle: #454545;
   --bs-light: #191919;
   --bs-light-rgb: 25,25,25;
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-bg: var(--bs-primary);
+  --bs-nav-pills-border-radius: 8px;
 }
 
 body {
