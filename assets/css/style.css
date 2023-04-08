@@ -33,3 +33,17 @@ body {
 .dropdown-item.active, .dropdown-item:active {
   background-color: var(--bs-dark);
 }
+
+input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+
+.main-nav .nav-link {
+  border-width: 0 !important;
+}
+
+@media screen and (min-width: 992px) {
+  .main-nav .nav-link {
+    border-width: 2px !important;
+  }
+}

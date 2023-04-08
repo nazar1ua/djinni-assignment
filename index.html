@@ -13,35 +13,38 @@
 </head>
 
 <body>
-  <header class="mb-3 border-bottom border-light-subtle">
-    <div class="container">
-      <div class="row flex-wrap align-items-center justify-content-center justify-content-lg-start" style="margin-bottom: -1px;">
-        <ul class="nav col-4 align-self-stretch gap-4">
-          <li><a href="#" class="nav-link d-flex align-items-center h-100 p-0 border-bottom border-2 border-primary link-dark fw-bold">Photos</a></li>
-          <li><a href="#" class="nav-link d-flex align-items-center h-100 p-0 border-bottom border-2 border-opacity-0 link-body-emphasis">Videos</a></li>
-          <li><a href="#" class="nav-link d-flex align-items-center h-100 p-0 border-bottom border-2 border-opacity-0 link-body-emphasis">Podcasts</a></li>
+  <header class="mb-3 border-bottom border-light-subtle navbar navbar-expand-lg py-0">
+    <div class="container align-items-center" style="@media screen and (min-width:992px) { margin-bottom: -1px; }">
+      <button class="navbar-toggler col-auto order-last" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="main-nav collapse navbar-collapse col-2 col-lg-4 align-self-stretch order-last order-lg-first" id="navbarSupportedContent">
+        <ul class="nav gap-3 gap-lg-4 flex-column flex-lg-row align-self-stretch pb-3 pb-lg-0">
+          <li><a href="#" class="nav-link justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-0 border-bottom border-primary link-dark fw-bold">Photos</a></li>
+          <li><a href="#" class="nav-link justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-0 border-bottom border-opacity-0 link-body-emphasis">Videos</a></li>
+          <li><a href="#" class="nav-link justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-0 border-bottom border-opacity-0 border-2 link-body-emphasis">Podcasts</a></li>
         </ul>
+      </nav>
 
-        <div class="col-6 py-3">
-          <form class="position-relative" role="search">
-            <svg class="position-absolute top-50 translate-middle-y pe-none" style="left: 12px;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 20L16.05 16.05M18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11Z" stroke="#666666" stroke-width="2" stroke-linecap="square"/>
-            </svg>            
-            <input type="search" class="form-control rounded-5 bg-light border-light" style="padding-left: 44px;" placeholder="Search for anything..." aria-label="Search">
-          </form>
-        </div>
+      <div class="col-7 col-sm-8 col-md-9 col-lg-5 col-xl-6 py-3">
+        <form class="position-relative" role="search">
+          <svg class="position-absolute top-50 translate-middle-y pe-none" style="left: 12px;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 20L16.05 16.05M18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11Z" stroke="#666666" stroke-width="2" stroke-linecap="square"/>
+          </svg>            
+          <input type="search" class="form-control rounded-5 bg-light border-light" style="padding-left: 44px;" placeholder="Search for anything..." aria-label="Search">
+        </form>
+      </div>
 
-        <div class="col-2 d-flex align-items-center justify-content-end gap-4">
-          <div class="dropdown text-end">
-            <a href="#" class="d-block link-secondary text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              English
-            </a>
-            <ul class="dropdown-menu text-small">
-              <li><a class="dropdown-item" href="#">🇺🇦 Ukrainian</a></li>
-            </ul>
-          </div>
-          <a href="#" class="link-secondary text-decoration-none">Sign in</a>
+      <div class="col-auto col-lg-3 col-xl-2 d-flex align-items-center justify-content-end gap-4">
+        <div class="dropdown text-end d-none d-lg-block">
+          <a href="#" class="d-block link-secondary text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            English
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">🇺🇦 Ukrainian</a></li>
+          </ul>
         </div>
+        <a href="#" class="link-secondary text-decoration-none">Sign in</a>
       </div>
     </div>
   </header>
