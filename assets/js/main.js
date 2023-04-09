@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (endOfPage && !scrollLock) {
       scrollLock = true
-      fetch(`https://picsum.photos/v2/list?page=${page}&limit=9`)
+      fetch(`https://picsum.photos/v2/list?page=${page}&limit=8`)
         .then(r => r.json())
         .then(r => {
           r.forEach(image => {
