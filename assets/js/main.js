@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const cardTemplate = (author, image) => (`
     <div class="card border-light-subtle">
-      <img src="${image}" class="card-img-top object-fit-cover" style="height: 200px;" alt="${author}">
+      <img src="${image}" class="card-img-top object-fit-cover" alt="${author}">
       <div class="card-body">
         <h5 class="card-title fw-bold fs-4 mb-1">${author}</h5>
         <p class="card-text text-secondary mb-2 text-line-clamp-2">${ Math.round(Math.random()) ? 'And here full text doesn’t fit, and at the very end of it we should show an elipsis truncation.' : 'Here goes some sample, example text that is relatively short.' }</p>
