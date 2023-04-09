@@ -28,13 +28,13 @@
   setTheme(getPreferredTheme())
 
   const showActiveTheme = (theme, focus = false) => {
-    const themeSwitcher = document.querySelectorAll('#bd-theme')
+    const themeSwitcher = document.querySelectorAll('.bd-theme')
 
     if (!themeSwitcher[0]) {
       return
     }
 
-    const themeSwitcherText = document.querySelectorAll('#bd-theme-text')
+    const themeSwitcherText = document.querySelectorAll('.bd-theme-text')
     const activeThemeIcon = document.querySelectorAll('.theme-icon-active')
     const btnToActive = document.querySelectorAll(`[data-bs-theme-value="${theme}"]`)
     let svgOfActiveBtn

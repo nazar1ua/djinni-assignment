@@ -25,8 +25,8 @@
           <li><a href="#" class="nav-link justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-0 border-bottom border-primary link-dark fw-bold">Photos</a></li>
           <li><a href="#" class="nav-link justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-0 border-bottom border-opacity-0 link-body-emphasis">Videos</a></li>
           <li><a href="#" class="nav-link justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-0 border-bottom border-opacity-0 link-body-emphasis">Podcasts</a></li>
-          <li class="d-lg-none"></li>
-          <li class="d-flex justify-content-center d-lg-none gap-3 align-items-baseline">
+          <li class="d-lg-none"><hr></li>
+          <li class="d-flex flex-column d-lg-none gap-2 align-items-center">
             <div class="dropdown-center text-center">
               <a href="#" class="nav-link link-body-emphasis p-0 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 English
@@ -36,11 +36,11 @@
               </ul>
             </div>
             <div class="dropdown theme-dropdown">
-              <button class="btn btn-link nav-link p-0 link-secondary dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (light)">
+              <button class="btn btn-link nav-link p-0 link-secondary dropdown-toggle d-flex align-items-center bd-theme" id="bd-theme-desktop" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (light)">
+                <span class="me-2 bd-theme-text fw-normal link-body-emphasis" id="bd-theme-text-desktop">Toggle theme</span>
                 <i class="bi my-1 theme-icon-active bi-sun-fill"></i>
-                <span class="d-none ms-2" id="bd-theme-text">Toggle theme</span>
               </button>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+              <ul class="dropdown-menu dropdown-menu-end translate-middle-x" style="left: 50%;" aria-labelledby="bd-theme-text-desktop">
                 <li>
                   <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
                     <i class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
@@ -88,9 +88,9 @@
         </div>
         <a href="#" class="link-secondary text-decoration-none">Sign in</a>
         <div class="dropdown d-none d-lg-block theme-dropdown">
-          <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle link-secondary d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (light)">
+          <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle link-secondary d-flex align-items-center bd-theme" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (light)">
             <i class="bi my-1 theme-icon-active bi-sun-fill"></i>
-            <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+            <span class="d-lg-none ms-2 bd-theme-text" id="bd-theme-text">Toggle theme</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
             <li>
@@ -119,8 +119,8 @@
 
   <div class="container ps-lg-0 main-container">
     <div class="row justify-content-between">
-      <aside class="col-md-3 pt-2 pt-md-3">
-        <ul class="nav nav-pills flex-column side-nav">
+      <aside class="col-lg-3 pt-2 pt-lg-3">
+        <ul class="nav nav-pills flex-column side-nav d-grid d-lg-flex">
           <li class="nav-item">
             <a class="nav-link active d-flex gap-2 fw-bold" aria-current="page" href="#">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -158,22 +158,22 @@
           </li>
         </ul>
       </aside>
-      <main class="col-md-8 mt-4 mt-md-0">
+      <main class="col-lg-8 mt-4 mt-lg-0">
         <div class="d-flex justify-content-between">
           <div>
             <h1 class="fw-bold">All photos</h1>
             <p class="mt-1 fw-bold text-secondary" style="font-size: 14px;">150 items</p>
           </div>
-          <div class="btn-group pt-2 pt-md-3 h-100 row flex-nowrap" role="group" aria-label="Sort options">
+          <div class="btn-group pt-2 pt-lg-3 h-100 row flex-nowrap" role="group" aria-label="Sort options">
             <button type="button" class="col btn btn-dark text-body-tertiary z-1">Newest</button>
             <button type="button" class="col btn btn-outline-light text-dark z-0">Latest</button>
           </div>
         </div>
-        <div id="cards" class="d-grid gap-4 pb-5 mt-2">
+        <div id="cards" class="d-grid gap-4 pb-3 mt-2">
           <div class="card border-light-subtle">
-            <img src="https://picsum.photos/id/0/5000/3333" class="card-img-top object-fit-cover" style="height: 200px;" alt="...">
+            <img src="assets/images/thumbnail-0.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="...">
             <div class="card-body">
-              <h5 class="card-title fw-bold fs-4 mb-1">Alejandro Escamilla</h5>
+              <h5 class="card-title fw-bold fs-4 mb-1">Heading</h5>
               <p class="card-text text-secondary mb-2 text-line-clamp-2">Here goes some sample, example text that is relatively short.</p>
               <button class="btn-reset">Show more...</button>
             </div>
@@ -183,9 +183,9 @@
             </div>
           </div>
           <div class="card border-light-subtle">
-            <img src="https://picsum.photos/id/1/5000/3333" class="card-img-top object-fit-cover" style="height: 200px;" alt="...">
+            <img src="assets/images/thumbnail-1.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="...">
             <div class="card-body">
-              <h5 class="card-title fw-bold fs-4 mb-1">Alejandro Escamilla</h5>
+              <h5 class="card-title fw-bold fs-4 mb-1">Heading</h5>
               <p class="card-text text-secondary mb-2 text-line-clamp-2">And here full text doesn’t fit, and at the very end of it we should show an elipsis truncation.</p>
               <button class="btn-reset">Show more...</button>
             </div>
@@ -194,6 +194,42 @@
               <a href="#" class="btn btn-outline-light text-dark">Share</a>
             </div>
           </div>
+          <div class="card border-light-subtle">
+            <img src="assets/images/thumbnail-2.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold fs-4 mb-1">Heading</h5>
+              <p class="card-text text-secondary mb-2 text-line-clamp-2">And here full text doesn’t fit, and at the very end of it we should show an elipsis truncation.</p>
+              <button class="btn-reset">Show more...</button>
+            </div>
+            <div class="card-footer border-light-subtle bg-transparent d-flex gap-3">
+              <a href="#" class="btn btn-primary">Save to collection</a>
+              <a href="#" class="btn btn-outline-light text-dark">Share</a>
+            </div>
+          </div>
+          <div class="card border-light-subtle">
+            <img src="assets/images/thumbnail-3.jpg" class="card-img-top object-fit-cover" style="height: 200px;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold fs-4 mb-1">Heading</h5>
+              <p class="card-text text-secondary mb-2 text-line-clamp-2">Here goes some sample, example text that is relatively short.</p>
+              <button class="btn-reset">Show more...</button>
+            </div>
+            <div class="card-footer border-light-subtle bg-transparent d-flex gap-3">
+              <a href="#" class="btn btn-primary">Save to collection</a>
+              <a href="#" class="btn btn-outline-light text-dark">Share</a>
+            </div>
+          </div>
+        </div>
+        <div class="pb-4 text-center">
+          <svg id="loader" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3V6" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M5.63599 5.63605L7.75731 7.75737" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M2.99976 12.0007H5.99976" stroke="currentColor" stroke-opacity="0.8" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M5.63611 18.3639L7.75743 16.2426" stroke="currentColor" stroke-opacity="0.7" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M12 18V21" stroke="currentColor" stroke-opacity="0.6" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M16.2427 16.2426L18.364 18.3639" stroke="currentColor" stroke-opacity="0.5" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M17.9998 12.0007H20.9998" stroke="currentColor" stroke-opacity="0.4" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M16.2427 7.75737L18.364 5.63605" stroke="currentColor" stroke-opacity="0.3" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
         </div>
       </main>
     </div>
