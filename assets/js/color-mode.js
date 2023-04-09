@@ -34,47 +34,29 @@
       if (!switcher) {
         return
       }
+      const switcherParent = switcher.parentElement
 
-      const themeSwitcherText = switcher.querySelector('.bd-theme-text')
-      const activeThemeIcon = document.querySelector('.theme-icon-active')
-      const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+      const themeSwitcherText = switcherParent.querySelector('.bd-theme-text')
+      const activeThemeIcon = switcherParent.querySelector('.theme-icon-active use')
+      const btnToActive = switcherParent.querySelector(`[data-bs-theme-value="${theme}"]`)
       const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
-    })
 
-    
-    
-    activeThemeIcon.forEach(el => {
-      el.classList.forEach(c => {
-        if (c.includes('bi-')) {
-          activeThemeIcon.forEach(element => {
-            element.classList.remove(c)
-          })
-        }
+      switcherParent.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+        element.classList.remove('active')
+        element.setAttribute('aria-pressed', 'false')
       })
-    })
 
-    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-      element.classList.remove('active')
-      element.setAttribute('aria-pressed', 'false')
-    })
+      btnToActive.classList.add('active')
+      btnToActive.setAttribute('aria-pressed', 'true')
+      activeThemeIcon.setAttribute('href', svgOfActiveBtn)
 
-    btnToActive.forEach(el => {
-      el.classList.add('active')
-      el.setAttribute('aria-pressed', 'true')
-    })
-    activeThemeIcon.forEach(el => {
-      el.classList.add(svgOfActiveBtn)
-    })
-    const themeSwitcherLabel = `${themeSwitcherText[0].textContent} (${btnToActive[0].dataset.bsThemeValue})`
-    themeSwitcher.forEach(el => {
-      el.setAttribute('aria-label', themeSwitcherLabel)
-    })
+      const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
+      switcher.setAttribute('aria-label', themeSwitcherLabel)
 
-    if (focus) {
-      themeSwitcher.forEach(el => {
-        el.focus()
-      })
-    }
+      if (focus) {
+        switcher.focus()
+      }
+    })
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
