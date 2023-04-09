@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   `)
 
   const handleInfiniteScroll = () => {
-    const endOfPage = window.innerHeight + window.pageYOffset >= document.body.offsetHeight
+    const endOfPage = window.innerHeight + window.scrollY + 100 >= document.body.offsetHeight
 
     if (endOfPage && !scrollLock) {
       scrollLock = true
