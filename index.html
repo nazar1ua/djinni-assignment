@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#ED7135">
 </head>
 
 <body>
@@ -96,21 +97,18 @@
               <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
                 <i class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
                 Light
-                <i class="bi ms-auto d-none bi-check2"></i>
               </button>
             </li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                 <i class="bi me-2 opacity-50 theme-icon bi-moon-stars-fill"></i>
                 Dark
-                <i class="bi ms-auto d-none bi-check2"></i>
               </button>
             </li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
                 <i class="bi me-2 opacity-50 theme-icon bi-circle-half"></i>
                 Auto
-                <i class="bi ms-auto d-none bi-check2"></i>
               </button>
             </li>
           </ul>
@@ -119,25 +117,85 @@
     </div>
   </header>
 
-  <div class="container ps-lg-0">
+  <div class="container ps-lg-0 main-container">
     <div class="row justify-content-between">
-      <aside class="col-3">
-        <ul class="nav nav-pills flex-column">
+      <aside class="col-md-3 pt-2 pt-md-3">
+        <ul class="nav nav-pills flex-column side-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <a class="nav-link active d-flex gap-2 fw-bold" aria-current="page" href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 6.5C13.6193 6.5 12.5 7.61929 12.5 9C12.5 10.3807 13.6193 11.5 15 11.5C16.3807 11.5 17.5 10.3807 17.5 9C17.5 7.61929 16.3807 6.5 15 6.5Z" fill="currentColor"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3H21V21H18.5266L18.4945 21.0002H5.5L5.46787 21H3V3ZM19 12.8362C17.8552 13.898 16.7044 14.4537 15 14.4537C13.0944 14.4537 11.6208 13.2859 10.1527 11.7048C9.15108 10.6262 7.51491 10.4335 6.29018 11.25L6.26758 11.2651L5 12.2134V5H19V12.8362Z" fill="currentColor"/>
+              </svg>
+              All photos
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link link-secondary d-flex gap-2 fw-bold" href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 12C17.5 15.0376 15.0376 17.5 12 17.5C8.96243 17.5 6.5 15.0376 6.5 12M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M11 9C11 9.82843 10.3284 10.5 9.5 10.5C8.67157 10.5 8 9.82843 8 9C8 8.17157 8.67157 7.5 9.5 7.5C10.3284 7.5 11 8.17157 11 9Z" fill="currentColor"/>
+                <path d="M16 9C16 9.82843 15.3284 10.5 14.5 10.5C13.6716 10.5 13 9.82843 13 9C13 8.17157 13.6716 7.5 14.5 7.5C15.3284 7.5 16 8.17157 16 9Z" fill="currentColor"/>
+              </svg>
+              Selfies
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link link-secondary d-flex gap-2 fw-bold" href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 8V12L14.5 14.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+              Recent
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link link-secondary d-flex gap-2 fw-bold" href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 21L5.00221 21.0665L5.06445 22H6V21ZM18 21V22H18.9356L18.9978 21.0665L18 21ZM3 5H2V7H3V5ZM21 7H22V5H21V7ZM11 11V10H9V11H11ZM9 16V17H11V16H9ZM15 11V10H13V11H15ZM13 16V17H15V16H13ZM4.00221 6.06652L5.00221 21.0665L6.99779 20.9335L5.99779 5.93348L4.00221 6.06652ZM6 22H18V20H6V22ZM18.9978 21.0665L19.9978 6.06652L18.0022 5.93348L17.0022 20.9335L18.9978 21.0665ZM19 5H5V7H19V5ZM3 7H5V5H3V7ZM19 7H21V5H19V7ZM9 11V16H11V11H9ZM13 11V16H15V11H13ZM12 4C13.3965 4 14.5725 4.95512 14.9055 6.24926L16.8424 5.75074C16.2874 3.59442 14.3312 2 12 2V4ZM9.09445 6.24926C9.42754 4.95512 10.6035 4 12 4V2C9.66883 2 7.71258 3.59442 7.15758 5.75074L9.09445 6.24926Z" fill="currentColor"/>
+              </svg>
+              Deleted
+            </a>
           </li>
         </ul>
       </aside>
-      <main class="col-8 bg-black">hello</main>
+      <main class="col-md-8 mt-4 mt-md-0">
+        <div class="d-flex justify-content-between">
+          <div>
+            <h1 class="fw-bold">All photos</h1>
+            <p class="mt-1 fw-bold text-secondary" style="font-size: 14px;">150 items</p>
+          </div>
+          <div class="btn-group pt-2 pt-md-3 h-100 row flex-nowrap" role="group" aria-label="Sort options">
+            <button type="button" class="col btn btn-dark text-body-tertiary z-1">Newest</button>
+            <button type="button" class="col btn btn-outline-light text-dark z-0">Latest</button>
+          </div>
+        </div>
+        <div id="cards" class="d-grid gap-4 pb-5 mt-2">
+          <div class="card border-light-subtle">
+            <img src="https://picsum.photos/id/0/5000/3333" class="card-img-top object-fit-cover" style="height: 200px;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold fs-4 mb-1">Alejandro Escamilla</h5>
+              <p class="card-text text-secondary mb-2 text-line-clamp-2">Here goes some sample, example text that is relatively short.</p>
+              <button class="btn-reset">Show more...</button>
+            </div>
+            <div class="card-footer border-light-subtle bg-transparent d-flex gap-3">
+              <a href="#" class="btn btn-primary">Save to collection</a>
+              <a href="#" class="btn btn-outline-light text-dark">Share</a>
+            </div>
+          </div>
+          <div class="card border-light-subtle">
+            <img src="https://picsum.photos/id/1/5000/3333" class="card-img-top object-fit-cover" style="height: 200px;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title fw-bold fs-4 mb-1">Alejandro Escamilla</h5>
+              <p class="card-text text-secondary mb-2 text-line-clamp-2">And here full text doesn’t fit, and at the very end of it we should show an elipsis truncation.</p>
+              <button class="btn-reset">Show more...</button>
+            </div>
+            <div class="card-footer border-light-subtle bg-transparent d-flex gap-3">
+              <a href="#" class="btn btn-primary">Save to collection</a>
+              <a href="#" class="btn btn-outline-light text-dark">Share</a>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </div>
 

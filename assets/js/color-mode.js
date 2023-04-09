@@ -44,8 +44,6 @@
           svgOfActiveBtn = c
         }
       })
-      // el.querySelector('.ms-auto').classList.remove('d-none')
-      // console.log(el.querySelector('.ms-auto'))
     })
     
     activeThemeIcon.forEach(el => {
