@@ -15,6 +15,27 @@
 </head>
 
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="sun-icon" viewBox="0 0 24 24" fill="none">
+        <path d="M13 1H11V4H13V1Z" fill="currentColor"/>
+        <path d="M13 20H11V23H13V20Z" fill="currentColor"/>
+        <path d="M20.4841 4.93005L18.3598 7.05427L16.9456 5.64005L19.0698 3.51584L20.4841 4.93005Z" fill="currentColor"/>
+        <path d="M7.05437 18.36L5.64016 16.9458L3.51594 19.07L4.93016 20.4842L7.05437 18.36Z" fill="currentColor"/>
+        <path d="M20 11H23V13H20V11Z" fill="currentColor"/>
+        <path d="M1 11V13H4V11H1Z" fill="currentColor"/>
+        <path d="M18.3598 16.9458L20.4841 19.07L19.0698 20.4842L16.9456 18.36L18.3598 16.9458Z" fill="currentColor"/>
+        <path d="M4.93016 3.51584L3.51594 4.93005L5.64016 7.05427L7.05437 5.64005L4.93016 3.51584Z" fill="currentColor"/>
+        <path d="M15.5355 8.46446C17.4882 10.4171 17.4882 13.5829 15.5355 15.5355C13.5829 17.4882 10.4171 17.4882 8.46446 15.5355C6.51185 13.5829 6.51185 10.4171 8.46446 8.46446C10.4171 6.51185 13.5829 6.51185 15.5355 8.46446" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="moon-stars-icon" viewBox="0 0 24 24" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5069 14.8742C19.0169 14.9568 18.5138 14.9999 18.001 14.9999C13.0304 14.9999 9.00098 10.9704 9.00098 5.99987C9.00098 5.48711 9.04402 4.98397 9.12668 4.49403C6.11019 5.65094 3.96875 8.57439 3.96875 11.998C3.96875 16.4351 7.56576 20.0321 12.0029 20.0321C15.4265 20.0321 18.35 17.8907 19.5069 14.8742ZM20.006 12.7085C19.3708 12.898 18.6978 12.9999 18.001 12.9999C14.135 12.9999 11.001 9.86586 11.001 5.99987C11.001 5.30307 11.1028 4.63004 11.2924 3.99486C11.4622 3.42587 11.7024 2.88725 12.0029 2.38911C12.0897 2.24514 12.1816 2.10454 12.2783 1.96757C12.1868 1.96511 12.095 1.96387 12.0029 1.96387C11.261 1.96387 10.538 2.04437 9.84201 2.19713C5.33892 3.18544 1.96875 7.19815 1.96875 11.998C1.96875 17.5397 6.46119 22.0321 12.0029 22.0321C16.8028 22.0321 20.8155 18.6619 21.8038 14.1588C21.9565 13.4628 22.037 12.7398 22.037 11.998C22.037 11.9059 22.0358 11.814 22.0333 11.7225C21.8963 11.8192 21.7557 11.9111 21.6117 11.998C21.1136 12.2985 20.575 12.5387 20.006 12.7085Z" fill="currentColor"/>
+        <path d="M16.3344 5.33319L17.501 2.99986L18.6677 5.33319L21.001 6.49986L18.6677 7.66652L17.501 9.99986L16.3344 7.66652L14.001 6.49986L16.3344 5.33319Z" fill="currentColor"/>
+      </symbol>
+      <symbol id="devices-icon" viewBox="0 0 24 24" fill="none">
+        <path d="M17 18H18M4 16V4H20V9M4 16H2V20H13M4 16H13M13 9H22V21H13V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+      </symbol>
+    </svg>
+
   <header class="mb-3 border-bottom border-light-subtle navbar navbar-expand-lg py-0">
     <div class="container align-items-center" style="@media screen and (min-width:992px) { margin-bottom: -1px; }">
       <button class="navbar-toggler col-auto order-last" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,28 +59,25 @@
             <div class="dropdown theme-dropdown">
               <button class="btn btn-link nav-link p-0 link-secondary dropdown-toggle d-flex align-items-center bd-theme" id="bd-theme-desktop" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (light)">
                 <span class="me-2 bd-theme-text fw-normal link-body-emphasis" id="bd-theme-text-desktop">Toggle theme</span>
-                <i class="bi my-1 theme-icon-active bi-sun-fill"></i>
+                <svg class="bi my-1 theme-icon-active"><use href="#sun-icon"></use></svg>
               </button>
               <ul class="dropdown-menu dropdown-menu-end translate-middle-x" style="left: 50%;" aria-labelledby="bd-theme-text-desktop">
                 <li>
                   <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
-                    <i class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
+                    <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-icon"></use></svg>
                     Light
-                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                   </button>
                 </li>
                 <li>
                   <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                    <i class="bi me-2 opacity-50 theme-icon bi-moon-stars-fill"></i>
+                    <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-icon"></use></svg>
                     Dark
-                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                   </button>
                 </li>
                 <li>
                   <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
-                    <i class="bi me-2 opacity-50 theme-icon bi-circle-half"></i>
+                    <svg class="bi me-2 opacity-50 theme-icon"><use href="#devices-icon"></use></svg>
                     Auto
-                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                   </button>
                 </li>
               </ul>
@@ -89,25 +107,25 @@
         <a href="#" class="link-secondary text-decoration-none">Sign in</a>
         <div class="dropdown d-none d-lg-block theme-dropdown">
           <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle link-secondary d-flex align-items-center bd-theme" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (light)">
-            <i class="bi my-1 theme-icon-active bi-sun-fill"></i>
+            <svg class="bi my-1 theme-icon-active"><use href="#sun-icon"></use></svg>
             <span class="d-lg-none ms-2 bd-theme-text" id="bd-theme-text">Toggle theme</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
-                <i class="bi me-2 opacity-50 theme-icon bi-sun-fill"></i>
+                <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-icon"></use></svg>
                 Light
               </button>
             </li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                <i class="bi me-2 opacity-50 theme-icon bi-moon-stars-fill"></i>
+                <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-icon"></use></svg>
                 Dark
               </button>
             </li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
-                <i class="bi me-2 opacity-50 theme-icon bi-circle-half"></i>
+                <svg class="bi me-2 opacity-50 theme-icon"><use href="#devices-icon"></use></svg>
                 Auto
               </button>
             </li>

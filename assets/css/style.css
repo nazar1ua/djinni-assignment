@@ -111,6 +111,13 @@ hr {
   margin: 0 auto;
 }
 
+.bi {
+  width: 1.125em;
+  height: 1.125em;
+  vertical-align: -0.125em;
+  fill: currentcolor;
+}
+
 .form-control {
   transition-property: background-color, color, box-shadow, border-color !important;
 }

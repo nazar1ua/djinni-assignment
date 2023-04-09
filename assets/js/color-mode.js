@@ -30,21 +30,18 @@
   const showActiveTheme = (theme, focus = false) => {
     const themeSwitcher = document.querySelectorAll('.bd-theme')
 
-    if (!themeSwitcher[0]) {
-      return
-    }
+    themeSwitcher.forEach(switcher => {
+      if (!switcher) {
+        return
+      }
 
-    const themeSwitcherText = document.querySelectorAll('.bd-theme-text')
-    const activeThemeIcon = document.querySelectorAll('.theme-icon-active')
-    const btnToActive = document.querySelectorAll(`[data-bs-theme-value="${theme}"]`)
-    let svgOfActiveBtn
-    btnToActive.forEach(el => {
-      el.querySelector('i').classList.forEach(c => {
-        if (c.includes('bi-')) {
-          svgOfActiveBtn = c
-        }
-      })
+      const themeSwitcherText = switcher.querySelector('.bd-theme-text')
+      const activeThemeIcon = document.querySelector('.theme-icon-active')
+      const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+      const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
     })
+
+    
     
     activeThemeIcon.forEach(el => {
       el.classList.forEach(c => {
