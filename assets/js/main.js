@@ -67,8 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(r => {
           r.forEach(image => {
             const cardsContainer = document.getElementById('cards')
+            const parts = image.download_url.split('/')
+            // image optimisation
+            parts[5] = 712
+            parts[6] = 400
             // faster, than manipulation with innerHTML
-            cardsContainer.insertAdjacentHTML('beforeend', cardTemplate(image.author, image.download_url))
+            cardsContainer.insertAdjacentHTML('beforeend', cardTemplate(image.author, parts.join('/')))
             initShowMoreButton(cardsContainer.lastElementChild)
           })
           page++
