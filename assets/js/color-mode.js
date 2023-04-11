@@ -28,6 +28,8 @@
   setTheme(getPreferredTheme())
 
   const showActiveTheme = (theme, focus = false) => {
+    if (!localStorage.getItem('theme')) theme = 'auto'
+
     const themeSwitcher = document.querySelectorAll('.bd-theme')
 
     themeSwitcher.forEach(switcher => {
