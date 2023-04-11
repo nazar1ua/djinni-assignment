@@ -215,6 +215,8 @@ html.no-transition * {
 .btn-group .btn {
   padding-top: 5px;
   padding-bottom: 7px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 @media screen and (min-width: 992px) {
@@ -253,4 +255,15 @@ html.no-transition * {
 
 #loader {
   animation: spin 1s steps(8, end) infinite;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1140px;
+  }
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
